@@ -1,5 +1,5 @@
 class Owner
-  # code goes helper_method
+  
   attr_reader :species, :name
   attr_accessor :cat, :dog
   
