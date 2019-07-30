@@ -71,15 +71,15 @@ class Owner
     self.cats.each {|kitty| kitty.owner = nil}
     self.dogs.each {|dog| dog.owner = nil}
     
-    #self.dogs.clear
-    #self.cats.clear
+    self.dogs.clear
+    self.cats.clear
     
     
 
     
-    #self.cats.each {|cat| cat.owner.clear}
-    #cats.each {|cat| cats.delete(cat.owner)}
-    #dogs.each {|dog| dogs.delete(dog.owner)}
+    self.cats.each {|cat| cat.owner.clear}
+    cats.each {|cat| cats.delete(cat.owner)}
+    dogs.each {|dog| dogs.delete(dog.owner)}
     
     
   end 
