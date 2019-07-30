@@ -42,14 +42,14 @@ class Owner
   
   def buy_cat(name)
     cat = Cat.new(name, self)
-    #@cats << cat
+    @cats << cat
     @@cats << cat
     cat.owner = self 
   end 
   
   def buy_dog(name)
     dog = Dog.new(name, self)
-    #@dogs << dog
+    @dogs << dog
     @@dogs << dog
     #self.dogs << dog #if !self.dogs.include?(dog)
     dog.owner = self #if self.dogs << dog 
