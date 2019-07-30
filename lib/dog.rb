@@ -1,18 +1,27 @@
 class Dog
+  # code goes here 
   attr_reader :name
-  attr_accessor :owner, :mood
-
-  @@all = []
+  attr_accessor :mood, :owner
+  
+  @@all = [] 
+  
 
   def initialize(name, owner)
     @name = name
+    @mood = 'nervous'
     @owner = owner
-    @owner.dogs << self
-    @mood = "nervous"
     @@all << self
-  end
-
-  def self.all
+    self.owner = @owner
+    owner.dogs << self if !@owner.dogs.include?(self)
+  end 
+  
+   def self.all 
     @@all
-  end
+  end 
+  
+  def self.clear
+    @@all.clear
+  end 
+  
+  
 end
