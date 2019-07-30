@@ -30,8 +30,8 @@ class Owner
     "I am a #{@species}."
   end
 
-  def buy_cat(cat)
-    Cat.new(Cat,self)
+  def buy_cat(Cat)
+    Cat.new(cat,self)
     @cats << Cat
   end
 
