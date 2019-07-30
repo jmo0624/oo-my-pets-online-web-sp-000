@@ -1,18 +1,25 @@
 class Cat
+  
+  attr_accessor :mood, :owner
   attr_reader :name
-  attr_accessor :owner, :mood
-
+  
   @@all = []
-
+  
   def initialize(name, owner)
-    @name = name
-    @owner = owner
-    @owner.cats << self
+    @name = name 
     @mood = "nervous"
+    @owner = owner
     @@all << self
-  end
-
-  def self.all
+    owner.cats << self if !@owner.cats.include?(self)
+  end 
+  
+  
+  def self.all 
     @@all
-  end
+  end 
+  
+  def self.clear
+    @@all.clear
+  end 
+  
 end
