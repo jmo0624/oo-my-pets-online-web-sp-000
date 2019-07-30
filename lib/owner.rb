@@ -51,8 +51,7 @@ class Owner
     dog = Dog.new(name, self)
     @dogs << dog
     @@dogs << dog
-    #self.dogs << dog #if !self.dogs.include?(dog)
-    dog.owner = self #if self.dogs << dog 
+    dog.owner = self 
   end 
   
   def walk_dogs
